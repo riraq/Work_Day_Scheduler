@@ -15,16 +15,19 @@ $(document).ready(function(){
     // .saveBtn
     // .saveBtn i:hover
     var schedulerContainer = $(".container")
-
+    var workHours = ["9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm"]
     // create timeblocks
     // make a for loop that iterates elements to build the timeblock structure
-    for (var i=0; i<9; i++) {
+    for (var i=0; i<workHours.length; i++) {
         var timeblockRows = $("<div>");
-        timeblockRows.addClass("row hour")
+        timeblockRows.addClass("row hour");
         schedulerContainer.append(timeblockRows);
     };
 
-    // separate the rows into columns
+    // separate the rows into columns by selecting rows, appending 3 new elements to each row, adding bootstrap column classes to newly appended elements
+    $(".row").append("<span class= 'col'>")
+    $(".row").append("<span class= 'col-8'>")
+    $(".row").append("<span class= 'col'>")
 
     // add times to blocks
     // use for loop to create column elements for time (or does jQuery automatically append to everything with the selected class/id?)
