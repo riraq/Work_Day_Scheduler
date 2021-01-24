@@ -14,10 +14,18 @@ $(document).ready(function(){
     // .future
     // .saveBtn
     // .saveBtn i:hover
-    
+    var schedulerContainer = $(".container")
+
     // create timeblocks
     // make a for loop that iterates elements to build the timeblock structure
-    
+    for (var i=0; i<9; i++) {
+        var timeblockRows = $("<div>");
+        timeblockRows.addClass("row hour")
+        schedulerContainer.append(timeblockRows);
+    };
+
+    // separate the rows into columns
+
     // add times to blocks
     // use for loop to create column elements for time (or does jQuery automatically append to everything with the selected class/id?)
     // use for loop to iterate times into the time column
